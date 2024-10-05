@@ -7,7 +7,7 @@ import RoadmapText from "../assets/roadmap-text.png";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] " id="roadmap">
-      <div className="conainter relative w-full min-h-screen">
+      <div className="relative w-full min-h-screen">
         <div className="absolute inset-0 w-full h-full">
           <img src={HeroBg} alt="Hero background" />
         </div>
