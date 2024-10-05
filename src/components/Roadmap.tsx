@@ -1,9 +1,10 @@
 import React from "react";
 import HeroBg from "../assets/slide-bg.jpg";
-import HeroImage from "../assets/roadmap.webp";
+// import HeroImage from "../assets/roadmap.webp";
 import PawPrint from "../assets/paw-print.png";
 // import Widget from "./Widget";
 import RoadmapText from "../assets/roadmap-text.png";
+import RafleContest from "../assets/raflecontest.png";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] " id="roadmap">
@@ -21,7 +22,7 @@ const Hero = () => {
             <img
               src={RoadmapText}
               alt="Hero background"
-              className="max-w-[350px] w-auto"
+              className="max-w-[400px] w-auto"
             />
             <div className="flex flex-wrap gap-1 md:gap-2 mt-5 max-w-[700px]">
               {[
@@ -70,7 +71,7 @@ const Hero = () => {
                   key={index}
                   className="flex flex-col gap-2 bg-[#fe7a13] p-4 rounded-lg min-w-[250px]"
                 >
-                  <h1 className="text-white font-gs-b md:text-lg">
+                  <h1 className="text-white font-gs-b md:text-2xl">
                     {phase.title}
                   </h1>
                   <ul>
@@ -100,13 +101,20 @@ const Hero = () => {
               />
             </div> */}
           </div>
-            <div className="max-md:hidden">
+          <div>
+            <img
+              src={RafleContest}
+              alt="Raffle Contest"
+              className="max-w-[300px] md:max-w-[550px] mt-4 mx-auto md:mx-0"
+            />
+          </div>
+          {/* <div className="max-md:hidden">
             <img
               src={HeroImage}
               alt="Hero background"
               className="max-w-[450px] mx-auto"
             />
-            </div>
+          </div> */}
         </div>
       </div>
     </div>

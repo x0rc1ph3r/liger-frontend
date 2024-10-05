@@ -1,8 +1,8 @@
 import React from "react";
 import HeroBg from "../assets/slide-2.jpg";
-import HeroImage from "../assets/gif-6.webp";
+import HeroImage from "../assets/gif-4.gif";
 import AboutText from "../assets/about-text.png";
-import RafleContest from "../assets/raflecontest.png";
+// import RafleContest from "../assets/raflecontest.png";
 
 const Hero = () => {
   return (
@@ -13,13 +13,13 @@ const Hero = () => {
         </div>
 
         <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-6 min-h-screen max-md:py-5">
-          <div className="flex-1 text-center md:text-left relative max-w-[600px]">
+          <div className="flex-1 text-center ml-56 md:text-left relative max-w-[700px]">
             <img
               src={AboutText}
               alt="About Text"
               className="max-w-[250px] md:max-w-[350px] w-auto mx-auto md:mx-0"
             />
-            <p className="max-w-[90%] md:max-w-[550px] font-gs text-lg md:text-xl mt-4 mx-auto md:mx-0">
+            <p className="text-black max-w-[90%] md:max-w-[700px] font-gs text-lg md:text-xl mt-4 mx-auto md:mx-0">
               In the wild world of digital currencies, where innovation and
               adaptability reign supreme, Liger emerges as a distinctive player,
               blending the strength of a lion with the agility of a tiger Just
@@ -34,18 +34,10 @@ const Hero = () => {
               specific slippage, although you may.
             </p>
           </div>
-          <div>
-            <img
-              src={RafleContest}
-              alt="Raffle Contest"
-              className="max-w-[300px] md:max-w-[550px] mt-4 mx-auto md:mx-0"
-            />
-          </div>
-
           <img
             src={HeroImage}
             alt="Hero Image"
-            className="w-full max-w-[350px]  max-md:hidden absolute -right-32"
+            className="w-full max-w-[400px] max-md:hidden absolute -right-32"
           />
         </div>
       </div>

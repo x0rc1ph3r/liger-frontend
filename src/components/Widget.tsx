@@ -24,11 +24,40 @@ const Widget = () => {
   const { publicKey, sendTransaction, connected, disconnect } = useWallet();
 
   const [time, setTime] = useState({
-    days: 2,
-    hours: 24,
-    minutes: 60,
-    seconds: 60,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   });
+
+  useEffect(() => {
+    // Function to calculate the time difference
+    const calculateTimeLeft = () => {
+      const now = new Date(); // Get current time
+      const target = new Date("2024-12-31T23:59:59"); // Parse the target time
+
+      // @ts-expect-error subtracting dates
+      const difference = target - now; // Get the difference in milliseconds
+
+      // If the target date is in the past, stop the countdown
+      if (difference <= 0) {
+        setTime({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24)); // Convert to days
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24); // Convert to hours
+      const minutes = Math.floor((difference / (1000 * 60)) % 60); // Convert to minutes
+      const seconds = Math.floor((difference / 1000) % 60); // Convert to seconds
+
+      setTime({ days, hours, minutes, seconds });
+    };
+
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(timer);
+  }, []);
 
   const handleBuy = async () => {
     try {
@@ -102,7 +131,7 @@ const Widget = () => {
 
   useEffect(() => {
     getCoinUSDprice("solana");
-  }, [])
+  }, []);
 
   function formatLargeNumber(number: number) {
     if (number >= 1000000) {
@@ -116,41 +145,6 @@ const Widget = () => {
     return number.toFixed(2);
   }
 
-  useEffect(() => {
-    const countdown = setInterval(() => {
-      const { days, hours, minutes, seconds } = time;
-
-      if (seconds > 0) {
-        setTime((prevTime) => ({ ...prevTime, seconds: prevTime.seconds - 1 }));
-      } else if (minutes > 0) {
-        setTime((prevTime) => ({
-          ...prevTime,
-          minutes: prevTime.minutes - 1,
-          seconds: 59,
-        }));
-      } else if (hours > 0) {
-        setTime((prevTime) => ({
-          ...prevTime,
-          hours: prevTime.hours - 1,
-          minutes: 59,
-          seconds: 59,
-        }));
-      } else if (days > 0) {
-        setTime((prevTime) => ({
-          ...prevTime,
-          days: prevTime.days - 1,
-          hours: 23,
-          minutes: 59,
-          seconds: 59,
-        }));
-      } else {
-        clearInterval(countdown);
-      }
-    }, 1000);
-
-    return () => clearInterval(countdown);
-  }, [time]);
-
   return (
     <div className="relative w-full max-w-[400px] z-[1] drop-shadow-[0_10px_6px_rgba(0,0,0,0.31)] bg-[#f7cb46]  rounded-xl  border-2 border-black">
       <div className="p-5">
@@ -160,9 +154,9 @@ const Widget = () => {
 
         <div className="max-w-[350px] w-full mx-auto">
           {/* timer  */}
-          <div className="flex items-center justify-between w-full gap-2 counter bg-[#fff3] rounded-t-[15px]">
+          <div className="text-[#fe7a13] flex items-center justify-between w-full gap-2 counter bg-[#fff3] rounded-t-[15px]">
             <div className="min-w-[78px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
-              <div className="text-sm font-semibold leading-[30px] font-gs-sb">
+              <div className="text-black text-sm font-semibold leading-[30px] font-gs-sb">
                 Days
               </div>
               <div className="text-[28px] font-semibold leading-[1] font-gs-sb">
@@ -171,7 +165,7 @@ const Widget = () => {
             </div>
 
             <div className="min-w-[78px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
-              <div className="text-sm font-semibold leading-[30px] font-gs-sb">
+              <div className="text-black text-sm font-semibold leading-[30px] font-gs-sb">
                 Hours
               </div>
               <div className="text-[28px] font-semibold leading-[1] font-gs-sb">
@@ -180,7 +174,7 @@ const Widget = () => {
             </div>
 
             <div className="min-w-[78px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
-              <div className="text-sm font-semibold leading-[30px] font-gs-sb">
+              <div className="text-black text-sm font-semibold leading-[30px] font-gs-sb">
                 Minutes
               </div>
               <div className="text-[28px] font-semibold leading-[1] font-gs-sb">
@@ -189,7 +183,7 @@ const Widget = () => {
             </div>
 
             <div className="min-w-[78px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
-              <div className="text-sm font-semibold leading-[30px] font-gs-sb">
+              <div className="text-black text-sm font-semibold leading-[30px] font-gs-sb">
                 Seconds
               </div>
               <div className="text-[28px] font-semibold leading-[1] font-gs-sb">
@@ -202,7 +196,7 @@ const Widget = () => {
             Until next Price increase
           </p>
 
-          <div className="mt-3 mb-2 leading-[1] text-sm text-center">
+          <div className="text-black mt-3 mb-2 leading-[1] text-sm text-center">
             <span className="leading-[1] font-gs-sb font-semibold">
               $16,985,353.34
             </span>
@@ -248,8 +242,8 @@ const Widget = () => {
           </div> */}
         </div>
 
-        <div className=" w-full mx-auto">
-          <p className="relative tracking-[1.5px] text-sm text-center mb-2 font-gs-m before:content-[''] before:w-[20%] before:h-[1px] before:bg-[#eaeaea] before:absolute before:left-0 before:top-1/2 after:content-[''] after:w-[20%] after:h-[1px] after:bg-[#eaeaea] after:absolute after:right-0 after:top-1/2">
+        <div className="  w-full mx-auto">
+          <p className="text-black relative tracking-[1.5px] text-sm text-center mb-2 font-gs-m before:content-[''] before:w-[20%] before:h-[1px] before:bg-[#eaeaea] before:absolute before:left-0 before:top-1/2 after:content-[''] after:w-[20%] after:h-[1px] after:bg-[#eaeaea] after:absolute after:right-0 after:top-1/2">
             1 $LIGER = {rate} SOL
           </p>
 
@@ -300,7 +294,7 @@ const Widget = () => {
             <div>
               {activeTab === "eth" && (
                 <div>
-                  <div className="mb-1 flex items-center justify-between">
+                  <div className="text-black mb-1 flex items-center justify-between">
                     <label className="tracking-[1] text-[13px] block font-gs-m">
                       {"SOL"} you pay ($
                       {/* @ts-expect-error parseFloat() will return NaN, which causes problems */}
@@ -315,7 +309,7 @@ const Widget = () => {
                     <input
                       type="number"
                       placeholder="0"
-                      className="h-full flex-1 py-[2px] text-base font-gs text-[#eaeaea] bg-transparent border-none leading-[1] outline-none truncate w-full"
+                      className="text-black h-full flex-1 py-[2px] text-base font-gs bg-transparent border-none leading-[1] outline-none truncate w-full"
                       min={0}
                       value={inputAmount}
                       onChange={(e) => setInputAmount(e.target.value)}
@@ -395,14 +389,14 @@ const Widget = () => {
             </div>
 
             <div>
-              <div className="mb-1 flex items-center justify-between">
+              <div className="text-black mb-1 flex items-center justify-between">
                 <label className="tracking-[1] text-[13px] block font-gs-m">
                   $LIGER You receive
                 </label>
               </div>
 
               <div className="relative min-h-11 flex justify-between items-center gap-1 rounded-[30px] px-[15px] border-2 border-white">
-                <div className="h-full flex-1 py-[2px] text-base font-gs text-[#eaeaea] bg-transparent border-none leading-[1] outline-none truncate w-full">
+                <div className="h-full flex-1 py-[2px] text-base font-gs text-black bg-transparent border-none leading-[1] outline-none truncate w-full">
                   {inputAmount != "" ? parseFloat(inputAmount) / rate : "0"}
                 </div>
                 <div className="">
@@ -461,19 +455,13 @@ const Widget = () => {
           </div>
 
           <div>
-            <button className="underline text-[17px] font-gs-sb text-center w-full mt-4 mx-auto">
+            <button className="text-black underline text-[17px] font-gs-sb text-center w-full mt-4 mx-auto">
               Don&apos;t have a wallet?
             </button>
             <div className="text-sm text-center flex items-center justify-center">
-              <p className="text-[#eaeaea]">
-                Powered by
-              </p>
+              <p className="text-black">Powered by</p>
               <div className="h-4">
-                <img
-                  src={Web3Payments}
-                  alt="Web3Payments"
-                  className="h-full"
-                />
+                <img src={Web3Payments} alt="Web3Payments" className="h-full" />
               </div>
             </div>
           </div>

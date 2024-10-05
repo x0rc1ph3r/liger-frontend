@@ -49,7 +49,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="flex-1 hidden md:flex items-center justify-center gap-6 font-gs-eb">
+      <div className="text-black flex-1 hidden md:flex items-center justify-center gap-6 font-gs-eb">
         <a
           className="text-[18px] px-2 rounded-lg hover:text-white hover:bg-[#fe7a13] cursor-pointer"
           href="#home"
@@ -85,7 +85,7 @@ const Navbar = () => {
 
       {/* Drawer for Mobile */}
       <div
-        className={`fixed top-0 left-0 w-2/3 h-full bg-[#ffcc02] p-4 z-40 transition-transform ${
+        className={`text-black fixed top-0 left-0 w-2/3 h-full bg-[#ffcc02] p-4 z-40 transition-transform ${
           isDrawerOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -147,9 +147,9 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <button className="bg-black text-white min-w-[130px] py-2.5 rounded-full uppercase font-gs-b text-xl">
-          Buy $LIGER
-        </button>
+        <a href="https://solscan.io/token/J4DHQpNE1LZ79wV2TuQsR64oAhwbE3pAJh5YHej5QQ9m" target="_blank" className="bg-black text-white text-center hover:bg-opacity-70 min-w-[130px] py-2.5 rounded-full uppercase font-gs-b text-xl">
+          Contract
+        </a>
       </div>
     </div>
   );

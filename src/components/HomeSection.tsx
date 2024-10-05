@@ -1,6 +1,6 @@
 import React from "react";
 import HeroBg from "../assets/slide-bg.jpg";
-import HeroImage from "../assets/gif-4.gif";
+import HeroImage from "../assets/home.webp";
 import Liger from "../assets/liger.png";
 import Widget from "./Widget";
 import LigerText from "../assets/liger-text.png";
@@ -45,9 +45,12 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-            <p className="max-w-[90%] md:max-w-[550px] font-gs text-lg md:text-xl mt-4 mx-auto md:mx-0">
-              Introducing Liger, the cryptocurrency that’s as powerful and
-              elusive as its namesake.
+            <p className="text-black max-w-[90%] md:max-w-[550px] font-gs text-lg md:text-xl mt-2 mx-auto md:mx-0">
+              Liger is an innovative cryptocurrency designed to bridge the gap
+              between traditional finance and the rapidly evolving world of
+              decentralized finance (DeFi). This digital asset aims to combine
+              the best features of existing cryptocurrencies while addressing
+              their limitations.
             </p>
 
             {/* Phases */}
@@ -86,7 +89,7 @@ const Hero = () => {
               <img
                 src={HeroImage}
                 alt="Hero Image"
-                className="w-full max-w-[400px]  absolute -right-10 -top-40 max-md:hidden"
+                className="w-full max-w-[500px] mt-20 absolute -right-12 top-20 max-md:hidden"
               />
             </div>
           </div>

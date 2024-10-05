@@ -11,10 +11,7 @@ const Hero = () => {
       <div className="relative w-full min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
-          <img
-            src={HeroBg}
-            alt="Hero background"
-          />
+          <img src={HeroBg} alt="Hero background" />
         </div>
 
         <div className="relative z-10 max-w-[1100px] mx-auto flex flex-col md:flex-row items-center gap-6 min-h-screen max-md:py-5">
@@ -32,7 +29,7 @@ const Hero = () => {
               className="max-w-[250px] md:max-w-[350px] w-auto mx-auto md:mx-0"
             />
 
-            <p className="max-w-[90%] md:max-w-[550px] font-gs text-lg md:text-xl my-4 mx-auto md:mx-0">
+            <p className="text-black max-w-[90%] md:max-w-[550px] font-gs text-lg md:text-xl my-4 mx-auto md:mx-0">
               LIGER has a total supply of 100,000,000 tokens. The $LIGER token
               is minted on SOLANA and is unique in that it can also be claimed,
               stored, and traded on Solana, BNB Chain, Base, Polygon, or
@@ -42,7 +39,7 @@ const Hero = () => {
             <div className="flex flex-col gap-4 items-center justify-center md:justify-start max-w-[600px]">
               <div className="max-w-[200px]">
                 <PieChart
-                  lineWidth={40}
+                  lineWidth={60}
                   data={[
                     { title: "Public Sale", value: 45, color: "#D82424" },
                     { title: "Liquidity", value: 42, color: "#C11A1A" },
@@ -50,7 +47,9 @@ const Hero = () => {
                     { title: "Team & Advisors", value: 5, color: "#F57900" },
                     { title: "Airdrops", value: 2, color: "#B45901" },
                   ]}
-                  label={({ dataEntry }) => `${Math.round(dataEntry.percentage)}%`}
+                  label={({ dataEntry }) =>
+                    `${Math.round(dataEntry.percentage)}%`
+                  }
                   labelStyle={{
                     fontSize: "6px",
                     fontFamily: "sans-serif",
@@ -63,7 +62,11 @@ const Hero = () => {
               <div className="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">
                 {[
                   { title: "Public Sale", value: "45%", color: "#D82424" },
-                  { title: "Exchange Liquidity", value: "42%", color: "#C11A1A" },
+                  {
+                    title: "Exchange Liquidity",
+                    value: "42%",
+                    color: "#C11A1A",
+                  },
                   { title: "Marketing", value: "6%", color: "#640606" },
                   { title: "Team & Advisors", value: "5%", color: "#F57900" },
                   { title: "Airdrops", value: "2%", color: "#B45901" },
@@ -71,9 +74,11 @@ const Hero = () => {
                   <div
                     key={idx}
                     className={`flex flex-col justify-center items-center gap-2 p-2 rounded-lg `}
-                    style={{backgroundColor: item.color}}
+                    style={{ backgroundColor: item.color }}
                   >
-                    <h1 className="text-white font-gs-b text-2xl md:text-3xl">{item.value}</h1>
+                    <h1 className="text-white font-gs-b text-2xl md:text-3xl">
+                      {item.value}
+                    </h1>
                     <p className="text-white font-gs-eb text-lg md:text-2xl">
                       {item.title}
                     </p>
@@ -82,13 +87,13 @@ const Hero = () => {
               </div>
             </div>
           </div>
-            <div className="max-md:hidden flex-1">
-              <img
-                src={HeroImage}
-                alt="Hero Image"
-                className="w-full max-w-[450px] max-md:hidden"
-              />
-            </div>
+          <div className="max-md:hidden flex-1">
+            <img
+              src={HeroImage}
+              alt="Hero Image"
+              className="w-full max-w-[450px] max-md:hidden"
+            />
+          </div>
 
           {/* Hero Image */}
           {/* <div className="mt-5 md:mt-0">
