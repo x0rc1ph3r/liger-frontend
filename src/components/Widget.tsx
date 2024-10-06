@@ -59,6 +59,10 @@ const Widget = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const handleCopyAddress = async () => {
+    navigator.clipboard.writeText('6HPwgiuTj1EnVMZxkvJw6UgaAyxaHyDG8gJQ3DcEhKb2');
+  }
+
   const handleBuy = async () => {
     try {
       const response = await fetch(`${host}/api/buy`, {
@@ -461,6 +465,12 @@ const Widget = () => {
             {/* <button className="text-black underline text-[17px] font-gs-sb text-center w-full mt-4 mx-auto">
               Don&apos;t have a wallet?
             </button> */}
+            <div className="text-black text-[17px] font-gs-sb text-center w-full mt-4 mx-auto">
+              Trouble connecting? You can also send SOL to this wallet:
+            </div>
+            <button onClick={handleCopyAddress} className="text-black underline hover:text-opacity-70 text-[17px] font-gs-sb text-center w-full mt-4 mx-auto">
+              6HPwgiuTj1.....JQ3DcEhKb2
+            </button>
             <div className="text-sm text-center mt-4 flex items-center justify-center">
               <p className="text-black">Powered by</p>
               <div className="h-4">
