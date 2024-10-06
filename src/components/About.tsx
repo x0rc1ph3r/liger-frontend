@@ -12,8 +12,8 @@ const Hero = () => {
           <img src={HeroBg} alt="Hero background" />
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-6 min-h-screen max-md:py-5">
-          <div className="flex-1 text-center ml-56 md:text-left relative max-w-[700px]">
+        <div className="relative z-10 max-w-[1200px] mx-auto flex justify-center flex-col md:flex-row items-center gap-6 min-h-screen max-md:py-5">
+          <div className="flex-1 text-center md:text-left relative max-w-[700px]">
             <img
               src={AboutText}
               alt="About Text"

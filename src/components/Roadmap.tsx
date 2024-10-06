@@ -24,7 +24,7 @@ const Hero = () => {
               alt="Hero background"
               className="max-w-[400px] w-auto"
             />
-            <div className="flex flex-wrap gap-1 md:gap-2 mt-5 max-w-[700px]">
+            <div className="flex justify-center flex-wrap gap-1 md:gap-2 mt-5 max-w-[700px]">
               {[
                 {
                   title: "Phase 1: The Beginning",

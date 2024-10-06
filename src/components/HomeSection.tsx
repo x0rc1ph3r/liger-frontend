@@ -22,13 +22,13 @@ const Hero = () => {
 
           {/* Text and Phases Section */}
           <div className="flex-1 relative text-center md:text-left -mt-24">
-            <div className="flex items-center justify-between max-w-[700px]">
+            <div className="flex mt-20 items-center justify-between max-w-[700px]">
               <img
                 src={LigerText}
                 alt="Liger Text"
                 className="max-w-[200px] md:max-w-[340px] mx-auto md:mx-0"
               />
-              <div className="bg-red-500 rounded-xl min-w-[200px]">
+              {/* <div className="bg-red-500 rounded-xl min-w-[200px]">
                 <a
                   href="/liger-pdf.pdf"
                   target="_blank"
@@ -43,7 +43,7 @@ const Hero = () => {
                     className="max-w-[120px] mx-auto md:mx-0"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
             <p className="text-black max-w-[90%] md:max-w-[550px] font-gs text-lg md:text-xl mt-2 mx-auto md:mx-0">
               Liger is an innovative cryptocurrency designed to bridge the gap
