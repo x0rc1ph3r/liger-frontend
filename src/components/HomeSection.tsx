@@ -8,13 +8,13 @@ import SolidProf from "../assets/solid-proof.png";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] max-md:bg-primary" id="home">
-      <div className="relative w-full min-h-screen max-md:h-auto">
+      <div className="relative w-full md:min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>
 
-        <div className="relative z-10 container flex flex-col md:flex-row items-center gap-6 md:gap-12 h-auto md:h-screen max-md:py-5">
+        <div className="relative z-10 container flex flex-col md:flex-row items-center gap-6 md:gap-12 md:min-h-screen max-md:py-5">
           {/* Widget Section */}
           <div className="flex-shrink-0 max-md:w-[90vw]">
             <Widget />

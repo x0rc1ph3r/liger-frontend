@@ -8,13 +8,13 @@ import { PieChart } from "react-minimal-pie-chart";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] max-md:bg-primary" id="tokenomics">
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full md:min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>
 
-        <div className="relative z-10 max-w-[1100px] max-md:max-w-[90vw] mx-auto flex flex-col md:flex-row items-center gap-6 min-h-screen max-md:py-5">
+        <div className="relative z-10 max-w-[1100px] max-md:max-w-[90vw] mx-auto flex flex-col md:flex-row items-center gap-6 md:min-h-screen max-md:py-5">
           {/* Widget Section */}
           {/* <div className="flex-shrink-0 max-md:hidden">
 

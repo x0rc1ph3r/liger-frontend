@@ -7,12 +7,12 @@ import AboutText from "../assets/about-text.png";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] max-md:bg-primary" id="about">
-      <div className="relative w-full min-h-screen ">
+      <div className="relative w-full md:min-h-screen">
         <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto flex justify-center flex-col md:flex-row items-center gap-6 min-h-screen max-md:py-5">
+        <div className="relative z-10 max-w-[1200px] mx-auto flex justify-center flex-col md:flex-row md:min-h-screen items-center gap-6 max-md:py-5">
           <div className="flex-1 text-center md:text-left relative max-w-[700px]">
             <img
               src={AboutText}
