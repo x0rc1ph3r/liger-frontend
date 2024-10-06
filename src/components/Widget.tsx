@@ -198,7 +198,7 @@ const Widget = () => {
 
           <div className="text-black mt-3 mb-2 leading-[1] text-sm text-center">
             <span className="leading-[1] font-gs-sb font-semibold">
-              $169,853
+              $0
             </span>
             <span className="leading-[1] font-gs-sb font-semibold">
               {" "}
@@ -210,7 +210,7 @@ const Widget = () => {
           <div className="w-full bg-gray-200 mb-5 overflow-hidden rounded-full h-3">
             <div
               className="bg-[#fe7a13] h-full rounded-full"
-              style={{ width: `${(169853 / 3000000) * 100}%` }}
+              style={{ width: `${(0 / 3000000) * 100}%` }}
             ></div>
           </div>
 
