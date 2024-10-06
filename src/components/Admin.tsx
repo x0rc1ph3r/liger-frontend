@@ -7,9 +7,9 @@ import { Buffer } from "buffer";
 
 export default function Admin() {
   const { sendTransaction } = useWallet();
-  const [updateAmount, setUpdateAmount] = useState('');
-  const [tokenAmount, setTokenAmount] = useState('');
-  const [tokenPrice, setTokenPrice] = useState('');
+  const [updateAmount, setUpdateAmount] = useState("");
+  const [tokenAmount, setTokenAmount] = useState("");
+  const [tokenPrice, setTokenPrice] = useState("");
 
   const handleStart = async () => {
     try {
@@ -63,7 +63,7 @@ export default function Admin() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          tokenprice: updateAmount
+          tokenprice: updateAmount,
         }),
       });
 
@@ -148,19 +148,34 @@ export default function Admin() {
         <WalletMultiButton />
       </div>
       <div>
-      Number of tokens for Presale:
-      <input style={{margin: '0px 20px', color: 'black'}} onChange={(e) => setTokenAmount(e.target.value)} />
-      Price of each token:
-      <input style={{margin: '0px 20px', color: 'black'}} onChange={(e) => setTokenPrice(e.target.value)} />
-        <button onClick={handleStart} style={{backgroundColor: "green"}}>Start Presale</button>
+        Number of tokens for Presale:
+        <input
+          style={{ margin: "0px 20px", color: "black" }}
+          onChange={(e) => setTokenAmount(e.target.value)}
+        />
+        Price of each token:
+        <input
+          style={{ margin: "0px 20px", color: "black" }}
+          onChange={(e) => setTokenPrice(e.target.value)}
+        />
+        <button onClick={handleStart} style={{ backgroundColor: "green" }}>
+          Start Presale
+        </button>
       </div>
       <div>
-        <input style={{marginRight: '20px', color: 'black'}} onChange={(e) => setUpdateAmount(e.target.value)} />
-        <button onClick={handleUpdate} style={{backgroundColor: "blue"}}>Update Token Price</button>
+        <input
+          style={{ marginRight: "20px", color: "black" }}
+          onChange={(e) => setUpdateAmount(e.target.value)}
+        />
+        <button onClick={handleUpdate} style={{ backgroundColor: "blue" }}>
+          Update Token Price
+        </button>
       </div>
       <div>
-        <button onClick={handleClose} style={{backgroundColor: "red"}}>Stop Presale</button>
+        <button onClick={handleClose} style={{ backgroundColor: "red" }}>
+          Stop Presale
+        </button>
       </div>
     </div>
   );
-};
+}
