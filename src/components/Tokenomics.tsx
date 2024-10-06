@@ -14,7 +14,7 @@ const Hero = () => {
           <img src={HeroBg} alt="Hero background" />
         </div>
 
-        <div className="relative z-10 max-w-[1100px] mx-auto flex flex-col md:flex-row items-center gap-6 min-h-screen max-md:py-5">
+        <div className="relative z-10 max-w-[1100px] max-md:max-w-[90vw] mx-auto flex flex-col md:flex-row items-center gap-6 min-h-screen max-md:py-5">
           {/* Widget Section */}
           {/* <div className="flex-shrink-0 max-md:hidden">
 

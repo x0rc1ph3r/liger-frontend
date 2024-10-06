@@ -152,10 +152,10 @@ const Widget = () => {
           Buy $LIGER Presale
         </p>
 
-        <div className="max-w-[350px] w-full mx-auto">
+        <div className="w-full mx-auto">
           {/* timer  */}
-          <div className="text-[#fe7a13] flex items-center justify-between w-full gap-2 counter bg-[#fff3] rounded-t-[15px]">
-            <div className="min-w-[78px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
+          <div className="text-[#fe7a13] flex items-center justify-between w-full counter bg-[#fff3] rounded-t-[15px]">
+            <div className="min-w-[70px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
               <div className="text-black text-sm font-semibold leading-[30px] font-gs-sb">
                 Days
               </div>
@@ -164,7 +164,7 @@ const Widget = () => {
               </div>
             </div>
 
-            <div className="min-w-[78px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
+            <div className="min-w-[70px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
               <div className="text-black text-sm font-semibold leading-[30px] font-gs-sb">
                 Hours
               </div>
@@ -173,7 +173,7 @@ const Widget = () => {
               </div>
             </div>
 
-            <div className="min-w-[78px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
+            <div className="min-w-[70px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
               <div className="text-black text-sm font-semibold leading-[30px] font-gs-sb">
                 Minutes
               </div>
@@ -182,7 +182,7 @@ const Widget = () => {
               </div>
             </div>
 
-            <div className="min-w-[78px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
+            <div className="min-w-[70px] py-[7px] px-[10px] text-center flex items-center justify-center flex-col">
               <div className="text-black text-sm font-semibold leading-[30px] font-gs-sb">
                 Seconds
               </div>

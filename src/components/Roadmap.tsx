@@ -8,7 +8,7 @@ import RafleContest from "../assets/raflecontest.png";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] max-md:bg-primary" id="roadmap">
-      <div className="relative w-full min-h-screen max-md:h-[130vh]">
+      <div className="relative w-full min-h-screen max-md:h-[150vh]">
         <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>

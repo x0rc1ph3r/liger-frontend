@@ -11,7 +11,7 @@ const Footer = () => {
           alt=""
         />
         </div>
-      <div className="text-black text-center text-xl">
+      <div className="text-black text-center text-balance">
         Copyright © 2024 liger.life. All Rights Reserved
       </div>
     </div>

@@ -8,7 +8,7 @@ import SolidProf from "../assets/solid-proof.png";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] max-md:bg-primary" id="home">
-      <div className="relative w-full min-h-screen max-md:h-[180vh]">
+      <div className="relative w-full min-h-screen max-md:h-[200vh]">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
@@ -16,7 +16,7 @@ const Hero = () => {
 
         <div className="relative z-10 container flex flex-col md:flex-row items-center gap-6 md:gap-12 h-screen max-md:py-5">
           {/* Widget Section */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 max-md:w-[90vw]">
             <Widget />
           </div>
 
@@ -45,7 +45,7 @@ const Hero = () => {
                 </div>
               </div> */}
             </div>
-            <p className="text-black max-w-[90%] md:max-w-[550px] font-gs text-lg md:text-xl mt-2 mx-auto md:mx-0">
+            <p className="text-black max-w-[1200px] md:max-w-[550px] font-gs text-lg md:text-xl mt-2 mx-auto md:mx-0">
               Liger is an innovative cryptocurrency designed to bridge the gap
               between traditional finance and the rapidly evolving world of
               decentralized finance (DeFi). This digital asset aims to combine
