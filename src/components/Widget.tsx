@@ -34,7 +34,7 @@ const Widget = () => {
     // Function to calculate the time difference
     const calculateTimeLeft = () => {
       const now = new Date(); // Get current time
-      const target = new Date("2024-12-31T23:59:59"); // Parse the target time
+      const target = new Date("2024-11-05T00:00:00"); // Parse the target time
 
       // @ts-expect-error subtracting dates
       const difference = target - now; // Get the difference in milliseconds
@@ -198,17 +198,20 @@ const Widget = () => {
 
           <div className="text-black mt-3 mb-2 leading-[1] text-sm text-center">
             <span className="leading-[1] font-gs-sb font-semibold">
-              $16,985,353.34
+              $169,853
             </span>
             <span className="leading-[1] font-gs-sb font-semibold">
               {" "}
-              / $17,031,764
+              / $3,000,000
             </span>
           </div>
 
           {/* Progess Bar  */}
-          <div className="h-3 w-full relative overflow-hidden mb-5 rounded-[20px]">
-            <div className="w-full bg-white h-full"></div>
+          <div className="w-full bg-gray-200 mb-5 overflow-hidden rounded-full h-3">
+            <div
+              className="bg-[#fe7a13] h-full rounded-full"
+              style={{ width: `${(169853 / 3000000) * 100}%` }}
+            ></div>
           </div>
 
           {/* <div className="flex justify-center items-center text-center mb-2 text-sm">
@@ -455,10 +458,10 @@ const Widget = () => {
           </div>
 
           <div>
-            <button className="text-black underline text-[17px] font-gs-sb text-center w-full mt-4 mx-auto">
+            {/* <button className="text-black underline text-[17px] font-gs-sb text-center w-full mt-4 mx-auto">
               Don&apos;t have a wallet?
-            </button>
-            <div className="text-sm text-center flex items-center justify-center">
+            </button> */}
+            <div className="text-sm text-center mt-4 flex items-center justify-center">
               <p className="text-black">Powered by</p>
               <div className="h-4">
                 <img src={Web3Payments} alt="Web3Payments" className="h-full" />

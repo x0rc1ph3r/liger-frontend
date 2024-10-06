@@ -4,7 +4,7 @@ import HeroImage from "../assets/home.webp";
 import Liger from "../assets/liger.png";
 import Widget from "./Widget";
 import LigerText from "../assets/liger-text.png";
-import SolidProf from "../assets/solid-proof.png";
+// import SolidProf from "../assets/solid-proof.png";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] max-md:bg-primary" id="home">
