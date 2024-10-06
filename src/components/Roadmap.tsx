@@ -7,9 +7,9 @@ import RoadmapText from "../assets/roadmap-text.png";
 import RafleContest from "../assets/raflecontest.png";
 const Hero = () => {
   return (
-    <div className="bg-[#b8d2c0] " id="roadmap">
-      <div className="relative w-full min-h-screen">
-        <div className="absolute inset-0 w-full h-full">
+    <div className="bg-[#b8d2c0] max-md:bg-primary" id="roadmap">
+      <div className="relative w-full min-h-screen max-md:h-[130vh]">
+        <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>
 
@@ -22,7 +22,7 @@ const Hero = () => {
             <img
               src={RoadmapText}
               alt="Hero background"
-              className="max-w-[400px] w-auto"
+              className="max-w-[250px] md:max-w-[350px] w-auto mx-auto md:mx-0"
             />
             <div className="flex justify-center flex-wrap gap-1 md:gap-2 mt-5 max-w-[700px]">
               {[

@@ -3,21 +3,18 @@ import liger from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <>
-      <div className="relative mt-5 h-full">
+    <div className="relative max-md:bg-primary">
         <div className="flex justify-center">
         <img  
-          className="w-full max-w-[380px] max-md:hidden"
+          className="w-full max-w-[380px]"
           src={liger}
-          height={50}
           alt=""
         />
         </div>
-      </div>
-      <div className="text-black relative text-center text-xl">
+      <div className="text-black text-center text-xl">
         Copyright © 2024 liger.life. All Rights Reserved
       </div>
-    </>
+    </div>
   );
 };
 

@@ -7,16 +7,16 @@ import LigerText from "../assets/liger-text.png";
 import SolidProf from "../assets/solid-proof.png";
 const Hero = () => {
   return (
-    <div className="bg-[#b8d2c0]" id="home">
-      <div className="relative w-full ">
+    <div className="bg-[#b8d2c0] max-md:bg-primary" id="home">
+      <div className="relative w-full min-h-screen max-md:h-[180vh]">
         {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>
 
         <div className="relative z-10 container flex flex-col md:flex-row items-center gap-6 md:gap-12 h-screen max-md:py-5">
           {/* Widget Section */}
-          <div className="flex-shrink-0 max-md:hidden">
+          <div className="flex-shrink-0">
             <Widget />
           </div>
 

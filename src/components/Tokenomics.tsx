@@ -7,10 +7,10 @@ import { PieChart } from "react-minimal-pie-chart";
 
 const Hero = () => {
   return (
-    <div className="bg-[#b8d2c0]" id="tokenomics">
+    <div className="bg-[#b8d2c0] max-md:bg-primary" id="tokenomics">
       <div className="relative w-full min-h-screen">
         {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>
 

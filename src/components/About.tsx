@@ -6,9 +6,9 @@ import AboutText from "../assets/about-text.png";
 
 const Hero = () => {
   return (
-    <div className="bg-[#b8d2c0]" id="about">
-      <div className="relative w-full min-h-screen">
-        <div className="absolute inset-0 w-full h-full">
+    <div className="bg-[#b8d2c0] max-md:bg-primary" id="about">
+      <div className="relative w-full min-h-screen ">
+        <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>
 
