@@ -8,12 +8,12 @@ import RafleContest from "../assets/raflecontest.png";
 const Hero = () => {
   return (
     <div className="bg-[#b8d2c0] max-md:bg-primary" id="roadmap">
-      <div className="relative w-full min-h-screen max-md:h-[150vh]">
+      <div className="relative w-full min-h-screen max-md:h-auto">
         <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
         </div>
 
-        <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12 h-screen max-md:py-5">
+        <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-12 h-auto md:h-screen max-md:py-5">
           {/* Widget Section */}
           {/* <div className="flex-shrink-0 max-md:hidden">
             <Widget />
