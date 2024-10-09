@@ -114,6 +114,36 @@ const Navbar = () => {
           >
             Roadmap
           </a>
+          <div className="flex justify-evenly">
+          <a
+            href="https://t.me/ligeroffical"
+            target="_blank"
+            className="bg-black p-2.5 rounded-lg hover:bg-opacity-70 cursor-pointer block"
+          >
+            <FaTelegramPlane size={24} color="#fff" />
+          </a>
+          <a
+            href="https://x.com/ligerofficial5"
+            target="_blank"
+            className="bg-black p-2.5 rounded-lg hover:bg-opacity-70 cursor-pointer block"
+          >
+            <RiTwitterXFill size={24} color="#fff" />
+          </a>
+          <a
+            href="https://www.instagram.com/ligerofficial5/"
+            target="_blank"
+            className="bg-black p-2.5 rounded-lg hover:bg-opacity-70 cursor-pointer block"
+          >
+            <AiFillInstagram size={24} color="#fff" />
+          </a>
+          </div>
+          <a
+            href="https://solscan.io/token/J4DHQpNE1LZ79wV2TuQsR64oAhwbE3pAJh5YHej5QQ9m"
+            target="_blank"
+            className="bg-black text-white text-center hover:bg-opacity-70 min-w-[130px] py-2.5 rounded-full uppercase font-gs-b text-xl"
+          >
+            Contract
+          </a>
         </div>
       </div>
 
@@ -147,7 +177,11 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <a href="https://solscan.io/token/J4DHQpNE1LZ79wV2TuQsR64oAhwbE3pAJh5YHej5QQ9m" target="_blank" className="bg-black text-white text-center hover:bg-opacity-70 min-w-[130px] py-2.5 rounded-full uppercase font-gs-b text-xl">
+        <a
+          href="https://solscan.io/token/J4DHQpNE1LZ79wV2TuQsR64oAhwbE3pAJh5YHej5QQ9m"
+          target="_blank"
+          className="bg-black text-white text-center hover:bg-opacity-70 min-w-[130px] py-2.5 rounded-full uppercase font-gs-b text-xl"
+        >
           Contract
         </a>
       </div>
