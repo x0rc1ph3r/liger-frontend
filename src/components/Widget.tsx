@@ -34,7 +34,7 @@ const Widget = () => {
     // Function to calculate the time difference
     const calculateTimeLeft = () => {
       const now = new Date(); // Get current time
-      const target = new Date("2024-11-05T00:00:00"); // Parse the target time
+      const target = new Date("2024-11-04T05:30:00"); // Parse the target time
 
       // @ts-expect-error subtracting dates
       const difference = target - now; // Get the difference in milliseconds
