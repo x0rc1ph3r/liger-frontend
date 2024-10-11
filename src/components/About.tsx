@@ -1,6 +1,6 @@
 import React from "react";
 import HeroBg from "../assets/slide-2.jpg";
-import HeroImage from "../assets/gif-4.gif";
+import HeroImage from "../assets/about.gif";
 import AboutText from "../assets/about-text.png";
 // import RafleContest from "../assets/raflecontest.png";
 
@@ -13,7 +13,7 @@ const Hero = () => {
         </div>
 
         <div className="relative z-10 max-w-[1200px] mx-auto flex justify-center flex-col md:flex-row md:min-h-screen items-center gap-6 max-md:py-5">
-          <div className="flex-1 text-center md:text-left relative max-w-[700px]">
+          <div className="flex-1 text-center md:text-left relative ">
             <img
               src={AboutText}
               alt="About Text"
@@ -37,7 +37,7 @@ const Hero = () => {
           <img
             src={HeroImage}
             alt="Hero Image"
-            className="w-full max-w-[400px] max-md:hidden absolute -right-32"
+            className="w-full max-w-[450px] max-md:hidden absolute -right-32"
           />
         </div>
       </div>

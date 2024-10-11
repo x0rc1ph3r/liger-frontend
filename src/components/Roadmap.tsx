@@ -5,9 +5,11 @@ import PawPrint from "../assets/paw-print.png";
 // import Widget from "./Widget";
 import RoadmapText from "../assets/roadmap-text.png";
 import RafleContest from "../assets/raflecontest.png";
+import Roadmap from "../assets/roadmap.png";
+
 const Hero = () => {
   return (
-    <div className="bg-[#b8d2c0] max-md:bg-primary" id="roadmap">
+    <div className="max-md:bg-primary" id="roadmap">
       <div className="relative w-full md:min-h-screen">
         <div className="absolute inset-0 w-full h-full max-md:hidden">
           <img src={HeroBg} alt="Hero background" />
@@ -18,7 +20,7 @@ const Hero = () => {
           {/* <div className="flex-shrink-0 max-md:hidden">
             <Widget />
           </div> */}
-          <div className="flex-1 relative">
+          {/* <div className="flex-1 relative">
             <img
               src={RoadmapText}
               alt="Hero background"
@@ -32,44 +34,44 @@ const Hero = () => {
                     "Website Goes Live",
                     "Contract Gets Written",
                     "Social Channels Are Born",
+                    "Community Building",
+                    "Presale Starts",
                   ],
                 },
                 {
                   title: "Phase 2: Development",
                   items: [
-                    "Contract Audit",
-                    "Presale Begins",
-                    "Community Building",
+                    "Developing the Liger wallet platform",
+                    "Presale Ends",
+                    "Listing on Raydium",
                   ],
                 },
                 {
                   title: "Phase 3: Awareness",
                   items: [
-                    "Marketing Initiation",
-                    "CoinMarketCap Application",
-                    "CoinGecko Application",
+                    "Huge Marketing Campaign",
+                    "Liger listing on CoinMarketCap and CoinGecko",
                   ],
                 },
                 {
                   title: "Phase 4: Expansion",
                   items: [
-                    "First DEX Listings",
-                    "DEXTools Update",
-                    "Birdeye Update",
+                    "Start Launch swap platform",
+                    "Start staking program",
+                    "Start liquidity pool",
+                    "Start Liger Blockchain Development",
                   ],
                 },
                 {
                   title: "Phase 5: Cosmic Travel",
                   items: [
-                    "First CEX Listings",
-                    "Continued Marketing",
-                    "Community Incentives",
+                    "Launching Liger Blockchain",
                   ],
                 },
               ].map((phase, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-2 bg-[#fe7a13] p-4 rounded-lg min-w-[250px]"
+                  className="flex flex-col gap-2 bg-[#fe7a13] p-4 rounded-lg min-w-[250px] w-full max-w-[300px]"
                 >
                   <h1 className="text-white font-gs-b md:text-2xl">
                     {phase.title}
@@ -78,12 +80,12 @@ const Hero = () => {
                     {phase.items.map((item, itemIndex) => (
                       <li
                         key={itemIndex}
-                        className="text-white font-gs-b flex gap-2 items-center text-[12px] md:text-sm"
+                        className="text-white font-gs-b flex gap-2 items-start text-[12px] md:text-sm"
                       >
                         <img
                           src={PawPrint}
                           alt="Paw print icon"
-                          className="max-w-[15px] mb-2"
+                          className="max-w-[15px] mb-1"
                         />
                         {item}
                       </li>
@@ -92,20 +94,24 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            {/* <div className="max-md:hidden">
-              <Image
-                src={HeroImage}
-                alt="Hero Image"
-                quality={100}
-                className="w-auto max-w-[450px]  absolute -right-32 -top-16 max-md:hidden"
-              />
-            </div> */}
+          </div> */}
+          <div className="flex-1">
+          <img
+              src={RoadmapText}
+              alt="Hero background"
+              className="max-w-[250px] md:max-w-[350px] w-auto mx-auto md:mx-0"
+            />
+            <img
+              src={Roadmap}
+              alt="Raffle Contest"
+              className="max-w-[300px] md:max-w-[500px] mt-4 mx-auto md:mx-0"
+            />
           </div>
           <div>
             <img
               src={RafleContest}
               alt="Raffle Contest"
-              className="max-w-[300px] md:max-w-[550px] mt-4 mx-auto md:mx-0"
+              className="max-w-[300px] md:max-w-[500px] mt-4 mx-auto md:mx-0 border-[5px] rounded border-black"
             />
           </div>
           {/* <div className="max-md:hidden">

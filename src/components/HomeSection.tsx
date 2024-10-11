@@ -1,6 +1,6 @@
 import React from "react";
 import HeroBg from "../assets/slide-bg.jpg";
-import HeroImage from "../assets/home.webp";
+import HeroImage from "../assets/home.gif";
 import Liger from "../assets/liger.png";
 import Widget from "./Widget";
 import LigerText from "../assets/liger-text.png";
@@ -89,7 +89,7 @@ const Hero = () => {
               <img
                 src={HeroImage}
                 alt="Hero Image"
-                className="w-full max-w-[500px] mt-20 absolute -right-12 top-20"
+                className="w-full max-w-[450px] mt-20 absolute -right-32 top-24"
               />
             </div>
           </div>

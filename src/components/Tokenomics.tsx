@@ -2,6 +2,7 @@ import React from "react";
 import HeroBg from "../assets/slide-bg.jpg";
 import HeroImage from "../assets/tokenomics.gif";
 import TokenomicsText from "../assets/tokenomics-text.png";
+import TokenomicsImage from "../assets/tokenomics.png";
 // import Widget from "./Widget";
 import { PieChart } from "react-minimal-pie-chart";
 
@@ -32,13 +33,18 @@ const Hero = () => {
             <p className="text-black max-w-[90%] md:max-w-[550px] font-gs text-lg md:text-xl my-4 mx-auto md:mx-0">
               LIGER has a total supply of 100,000,000 tokens. The $LIGER token
               is minted on SOLANA and is unique in that it can also be claimed,
-              stored, and traded on Solana, BNB Chain, Base, Polygon, or
-              Avalanche using Wormhole and Portal Bridge tech.
+              stored, and traded on Solana.
             </p>
 
             <div className="flex flex-col gap-4 items-center justify-center md:justify-start max-w-[600px]">
-              <div className="max-w-[200px]">
-                <PieChart
+              <div className="">
+                {/* <img
+                  src={TokenomicsImage}
+                  alt="Hero background"
+                  className="max-w-[250px] md:max-w-[300px] w-auto mx-auto"
+                /> */}
+
+                {/* <PieChart
                   lineWidth={60}
                   data={[
                     { title: "Public Sale", value: 45, color: "#D82424" },
@@ -56,7 +62,7 @@ const Hero = () => {
                     fill: "#fff",
                   }}
                   labelPosition={70}
-                />
+                /> */}
               </div>
 
               <div className="flex flex-wrap gap-4 mt-4 justify-center md:justify-start">
@@ -89,9 +95,9 @@ const Hero = () => {
           </div>
           <div className="max-md:hidden flex-1">
             <img
-              src={HeroImage}
+              src={TokenomicsImage}
               alt="Hero Image"
-              className="w-full max-w-[450px] max-md:hidden"
+              className="w-full md:min-w-[500px] max-md:hidden"
             />
           </div>
 
