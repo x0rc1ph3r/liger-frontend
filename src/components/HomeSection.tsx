@@ -89,7 +89,7 @@ const Hero = () => {
               <img
                 src={HeroImage}
                 alt="Hero Image"
-                className="w-full max-w-[450px] mt-20 absolute -right-32 top-24"
+                className="w-full max-w-[400px] mt-20 absolute -right-16 top-24"
               />
             </div>
           </div>

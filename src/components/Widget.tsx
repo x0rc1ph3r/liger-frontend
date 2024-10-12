@@ -34,7 +34,7 @@ const Widget = () => {
     // Function to calculate the time difference
     const calculateTimeLeft = () => {
       const now = new Date(); // Get current time
-      const target = new Date("2024-11-04T05:30:00"); // Parse the target time
+      const target = new Date("2024-10-19T05:30:00"); // Parse the target time
 
       // @ts-expect-error subtracting dates
       const difference = target - now; // Get the difference in milliseconds
@@ -202,7 +202,7 @@ const Widget = () => {
 
           <div className="text-black mt-3 mb-2 leading-[1] text-sm text-center">
             <span className="leading-[1] font-gs-sb font-semibold">
-              $53,259
+              $103,259
             </span>
             <span className="leading-[1] font-gs-sb font-semibold">
               {" "}
@@ -214,7 +214,7 @@ const Widget = () => {
           <div className="w-full bg-gray-200 mb-5 overflow-hidden rounded-full h-3">
             <div
               className="bg-[#fe7a13] h-full rounded-full"
-              style={{ width: `${(53259 / 3000000) * 100}%` }}
+              style={{ width: `${(103259 / 3000000) * 100}%` }}
             ></div>
           </div>
 
